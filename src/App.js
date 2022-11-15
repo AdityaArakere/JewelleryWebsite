@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route, } from "react-router-dom";
+import Hamburger from "./components/Hamburger";
+import MainPage from "./pages/MainPage";
+import Silver from "./pages/SilverPage";
+import Gold from "./pages/GoldPage";
+import Platinum from "./pages/PlatinumPage";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Hamburger />
+        <Routes>
+          <Route path="/" element={<MainPage />}></Route>
+          <Route path="/silver" element={<Silver />}></Route>
+          <Route path="/platinum" element={<Platinum />}></Route>
+          <Route path="/gold" element={<Gold />}></Route>
+        </Routes>
+    </BrowserRouter>
   );
 }
 

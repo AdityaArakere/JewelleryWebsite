@@ -1,13 +1,272 @@
+.offcanvas.show:not(.hiding),
+.offcanvas.showing {
+  -webkit-transform: none;
+  transform: none;
+}
+.offcanvas.offcanvas-start {
+  top: 0;
+  left: 0;
+  width: var(--bs-offcanvas-width);
+  border-right: var(--bs-offcanvas-border-width) solid
+    var(--bs-offcanvas-border-color);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.offcanvas.hiding,
+.offcanvas.show,
+.offcanvas.showing {
+  visibility: visible;
+}
+.offcanvas {
+  position: fixed;
+  bottom: 0;
+  z-index: 1045;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  color: var(--bs-offcanvas-color);
+  visibility: hidden;
+  background-color: var(--bs-offcanvas-bg);
+  background-clip: padding-box;
+  outline: 0;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.offcanvas {
+  --bs-offcanvas-width: 340px;
+  --bs-offcanvas-height: 100vh;
+  --bs-offcanvas-padding-x: 1rem;
+  --bs-offcanvas-padding-y: 1rem;
+  --bs-offcanvas-bg: #fff;
+  --bs-offcanvas-border-width: 1px;
+  --bs-offcanvas-border-color: var(--bs-border-color-translucent);
+  --bs-offcanvas-box-shadow: 0 0.125rem 0.25remrgba (0, 0, 0, 0.075);
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+div {
+  display: block;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+body,
+code {
+  color: #1a1a1a;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg {
+  background: url("g1.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text {
+  width: 250px;
+  position: absolute;
+  text-align: center;
+  color: red;
+  margin: 0%;
+  padding: 5px;
+  left: 50%;
+  margin-left: -125px;
+}
+
+.container {
+  padding: 6px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1 {
+  width: 25px;
+  height: 4px;
+  background-color: black;
+  margin: 3px 0;
+  transition: 0.4s;
+  padding: 0px;
+}
+
+.bruh {
+  width: 0px;
+  height: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+.offcanvas-header .btn-close {
+  padding: calc(var(--bs-offcanvas-padding-y) * 0.7)
+    calc(var(--bs-offcanvas-padding-x) * 0.6);
+  margin-top: calc(var(--bs-offcanvas-padding-y) * -0);
+  margin-right: calc(var(--bs-offcanvas-padding-x) * -0.5);
+  margin-bottom: calc(var(--bs-offcanvas-padding-y) * -0.5);
+}
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+}
+.btn-close {
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding-top: 10px;
+  color: #000;
+  background: transparent url("x.jpg") 50%/1.3em auto no-repeat;
+  border: 0;
+  border-radius: 0.375rem;
+  margin-top: 2px;
+}
+/* [type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: button;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+} */
+
+.offcanvas-backdrop.show {
+  opacity: 0.5;
+}
+.offcanvas-backdrop.fade {
+  opacity: 0.3;
+}
+.offcanvas-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+
+.fade {
+  transition: opacity 0.15s linear;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+div {
+  display: block;
+}
+
+.offcanvas-body{
+  width: 340px;
+  height: 100vh;
+}
+
+.lol1 {
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+}
+
+.lol2 {
+  color: white;
+  padding: 0px;
+  margin: 0px;
+}
+
+.lol2 > .collection {
+  background-color: #1c1d1d;
+}
+.lol2 > .collection2 {
+  background-color: #1c1d1d;
+  padding: 10px;
+}
+
+.lol2 li {
+  list-style: none;
+}
+
+.collection {
+  position: relative;
+  display: block;
+  padding: 20px;
+}
+
+.collection::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  right: 15px;
+  border-bottom: 1px solid #239999;
+}
+
+.collection a{
+  color: white;
+  text-decoration: none;
+}
+
+.second_bg{
+  background-color: wheat;
+}
+
+.sec{
+  margin: 0px;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.FixedHamburger{
+  position: relative;
+}
+
+.pages{
+  position: relative;
+}
+
+.SilverPage{
+  background-color: silver;
+  height: 100vh;
+}
+
+.PlatinumPage{
+  background-color: paleturquoise;
+  height: 100vh;
+}
+
+.GoldPage{
+  background-color: gold;
+  height: 100vh;
 }
