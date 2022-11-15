@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/JewelleryWebsite/static/css/main.8ae70447.css",
+    "main.js": "/JewelleryWebsite/static/js/main.45abf793.js",
+    "static/media/g1.jpg": "/JewelleryWebsite/static/media/g1.d41a9d7e98bf33c18961.jpg",
+    "static/media/silver_img.png": "/JewelleryWebsite/static/media/silver_img.53bfab154152a7ffacb8.png",
+    "static/media/x.jpg": "/JewelleryWebsite/static/media/x.e2bb47f14e376195c6f0.jpg",
+    "static/media/silver_img1.png": "/JewelleryWebsite/static/media/silver_img1.2e2c6d2a0795bf2d7500.png",
+    "index.html": "/JewelleryWebsite/index.html",
+    "main.8ae70447.css.map": "/JewelleryWebsite/static/css/main.8ae70447.css.map",
+    "main.45abf793.js.map": "/JewelleryWebsite/static/js/main.45abf793.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ae70447.css",
+    "static/js/main.45abf793.js"
+  ]
+}
